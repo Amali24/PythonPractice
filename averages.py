@@ -20,8 +20,13 @@ def mode(ar, n):
             nums[num] += 1
         else:
             nums[num] = 1
-    key = max(nums, key = nums.get)
-    return key
+    maxOcc = 0
+    maxKey = -1
+    for key in nums:
+        if nums[key] > maxOcc:
+            maxOcc = nums[key]
+            maxKey = key
+    return maxKey
 
 if __name__ == '__main__':
     n = int(input())
