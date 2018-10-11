@@ -64,13 +64,14 @@ elif menuchoice == "3":
             s += 1
         while inputString[e].isspace():
             e -= 1  
-        # move to the next pair of letters
-        s += 1
-        e -= 1
         if inputString[s] != inputString[e]:
             # if the letters don't match print it and flip our flag
             print("That's not a palindrome!")
             isPalindrome = False
+        # move to the next pair of letters
+        s += 1
+        e -= 1
+
     if isPalindrome:
         # if we finish the while loop without flipping the flag, it must be a palindrome
         print("That's a palindrome!")
