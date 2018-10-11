@@ -1,9 +1,5 @@
 def mean(ar, n):
-    total = 0
-    for num in ar:
-        num = num
-        total += num   
-    return total / n
+    return sum(ar) / n
 
 def median(ar, n):
     if n < 1:
