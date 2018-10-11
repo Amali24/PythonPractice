@@ -12,4 +12,7 @@ if __name__ == '__main__':
     total = 0
     for i in range(0, n):
         total += x[i] * w[i]
-    print (str(total/sum(w)))
+    totalWeight = sum(w)
+    wAvg = total/totalWeight
+    wAvg = round(wAvg, 1)
+    print(str(wAvg))
