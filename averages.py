@@ -6,7 +6,6 @@ def mean(ar, n):
     return total / n
 
 def median(ar, n):
-    ar.sort()
     if n % 2 == 0:
         return ar[n//2] + ar[(n//2) + 1] / 2
     else:
@@ -29,6 +28,8 @@ if __name__ == '__main__':
     ar = []
     for num in arin:
         ar.append(int(num))
+    
+    ar.sort()
 
     meanout = mean(ar,n)
     print(str(meanout))
