@@ -6,10 +6,12 @@ def mean(ar, n):
     return total / n
 
 def median(ar, n):
-    if n % 2 == 0:
-        return ar[n//2] + ar[(n//2) + 1] / 2
-    else:
+    if n < 1:
+        return None
+    if n % 2 != 0:
         return ar[n//2]
+    else:
+        return sum(ar[n//2-1:n//2+1])/2.0
 
 def mode(ar, n):
     nums = {}
