@@ -14,19 +14,7 @@ def median(ar, n):
         return sum(ar[n//2-1:n//2+1])/2.0
 
 def mode(ar, n):
-    nums = {}
-    for num in ar:
-        if num in nums:
-            nums[num] += 1
-        else:
-            nums[num] = 1
-    maxOcc = 0
-    maxKey = -1
-    for key in nums:
-        if nums[key] > maxOcc:
-            maxOcc = nums[key]
-            maxKey = key
-    return maxKey
+    return max(ar, key = ar.count)
 
 if __name__ == '__main__':
     n = int(input())
