@@ -6,6 +6,7 @@ def mean(ar, n):
     return total / n
 
 def median(ar, n):
+    ar.sort()
     if n % 2 == 0:
         return ar[n//2] + ar[(n//2) + 1] / 2
     else:
@@ -18,7 +19,8 @@ def mode(ar, n):
             nums[num] += 1
         else:
             nums[num] = 1
-    return max(nums.values())
+    key = max(nums, key = nums.get)
+    return key
 
 if __name__ == '__main__':
     n = int(input())
