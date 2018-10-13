@@ -28,6 +28,6 @@ if __name__ == '__main__':
     q1 = statistics.median(L)
     q3 = statistics.median(U)
 
-    diff = q3 - q1
+    diff = float(q3 - q1)
 
     print(str(diff))
